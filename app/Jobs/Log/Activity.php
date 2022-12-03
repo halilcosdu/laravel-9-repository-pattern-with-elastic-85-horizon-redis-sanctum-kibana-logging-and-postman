@@ -5,11 +5,12 @@ namespace App\Jobs\Log;
 use App\Contracts\Log\User\ActivityContract;
 use App\Extensions\ES\Log\ActivityBag;
 use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 
-class Activity
+class Activity implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 

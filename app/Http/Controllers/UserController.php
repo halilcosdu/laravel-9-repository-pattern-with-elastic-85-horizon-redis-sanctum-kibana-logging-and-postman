@@ -32,6 +32,10 @@ class UserController extends Controller
      */
     public function index(IndexRequest $request, UserFilters $filters)
     {
+        activity([
+            'action' => 'users.index',
+        ]);
+
         return $this->response()->success(
             UserResource::collection($this->userContract->paginateWithFilters($filters, $request->per_page))
         );
@@ -45,6 +49,10 @@ class UserController extends Controller
      */
     public function store(StoreRequest $request)
     {
+        activity([
+            'action' => 'users.store',
+        ]);
+
         return $this->response()->success(
             new UserResource($this->userContract->create($request->validated()))
         );
@@ -58,6 +66,10 @@ class UserController extends Controller
      */
     public function show(ShowRequest $request, $id)
     {
+        activity([
+            'action' => 'users.show',
+        ]);
+
         return $this->response()->success(
             new UserResource($this->userContract->find($id))
         );
@@ -72,6 +84,10 @@ class UserController extends Controller
      */
     public function update(UpdateRequest $request, int $id)
     {
+        activity([
+            'action' => 'users.update',
+        ]);
+
         $this->userContract->update($request->validated(), $id);
 
         return $this->response()->noContent();
@@ -86,6 +102,10 @@ class UserController extends Controller
      */
     public function destroy(DestroyRequest $request, int $id)
     {
+        activity([
+            'action' => 'users.destroy',
+        ]);
+
         $this->userContract->delete($id);
 
         return $this->response()->noContent();
