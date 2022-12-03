@@ -2,7 +2,7 @@
 
 namespace App\Repositories\ES\Log;
 
-use App\Contracts\User\ActivityContract;
+use App\Contracts\Log\User\ActivityContract;
 use App\Models\Log\Activity;
 use App\Repositories\ES\Repository;
 use Carbon\Carbon;

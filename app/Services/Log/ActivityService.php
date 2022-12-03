@@ -3,7 +3,7 @@
 namespace App\Services\Log;
 
 use App\Contracts\Log\ActivityContract;
-use App\Contracts\User\ActivityContract as UserActivityContract;
+use App\Contracts\Log\User\ActivityContract as UserActivityContract;
 use App\Extensions\ES\Log\ActivityBag;
 use App\Jobs\Log\Activity;
 use App\Services\DateService;
@@ -16,7 +16,7 @@ class ActivityService implements ActivityContract
 {
     /**
      * @param  \App\Extensions\ES\Log\ActivityBag  $activityBag
-     * @param  \App\Contracts\User\ActivityContract  $activityContract
+     * @param  \App\Contracts\Log\User\ActivityContract  $activityContract
      * @param  \App\Services\DateService  $dateService
      */
     public function __construct(

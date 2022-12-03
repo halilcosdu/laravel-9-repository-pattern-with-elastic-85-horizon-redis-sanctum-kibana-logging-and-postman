@@ -3,7 +3,7 @@
 namespace App\Providers\Log;
 
 use App\Contracts\Log\ActivityContract;
-use App\Contracts\User\ActivityContract as UserActivityContract;
+use App\Contracts\Log\User\ActivityContract as UserActivityContract;
 use App\Repositories\ES\Log\ActivityRepository;
 use App\Services\Log\ActivityService;
 use Illuminate\Support\ServiceProvider;

@@ -198,7 +198,8 @@ return [
         App\Providers\HorizonServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\Log\ActivityProvider::class,
-        App\Providers\Response\ResponseServiceProvider::class
+        App\Providers\Response\ResponseServiceProvider::class,
+        App\Providers\RepositoryServiceProvider::class,
 
     ],
 

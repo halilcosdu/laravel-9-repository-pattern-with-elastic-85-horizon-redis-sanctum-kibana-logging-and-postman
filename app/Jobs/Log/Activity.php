@@ -2,7 +2,7 @@
 
 namespace App\Jobs\Log;
 
-use App\Contracts\User\ActivityContract;
+use App\Contracts\Log\User\ActivityContract;
 use App\Extensions\ES\Log\ActivityBag;
 use Illuminate\Bus\Queueable;
 use Illuminate\Foundation\Bus\Dispatchable;

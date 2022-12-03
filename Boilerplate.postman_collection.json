@@ -165,7 +165,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}/reset-password?token=17809580e72a00f72b975746168bda1ef0f3102e2684544f7bc3379050c86a19&email={{email}}&password={{password}}&password_confirmation={{password}}",
+							"raw": "{{host}}/reset-password?token={{token}}&email={{email}}&password={{password}}&password_confirmation={{password}}",
 							"host": [
 								"{{host}}"
 							],
@@ -175,7 +175,7 @@
 							"query": [
 								{
 									"key": "token",
-									"value": "17809580e72a00f72b975746168bda1ef0f3102e2684544f7bc3379050c86a19"
+									"value": "{{token}}"
 								},
 								{
 									"key": "email",
@@ -336,14 +336,14 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}/api/activities/jA47zoQBk8BW00OVV-0f",
+							"raw": "{{host}}/api/activities/{{logID}}",
 							"host": [
 								"{{host}}"
 							],
 							"path": [
 								"api",
 								"activities",
-								"jA47zoQBk8BW00OVV-0f"
+								"{{logID}}"
 							]
 						}
 					},
@@ -378,6 +378,212 @@
 							"path": [
 								"api",
 								"activities"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-XSRF-TOKEN",
+								"value": "{{xsrf-token}}",
+								"type": "text"
+							},
+							{
+								"key": "Referer",
+								"value": "{{referrer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/users?name=HalilCosdu&email=halilcosdu@gmail.com",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "HalilCosdu"
+								},
+								{
+									"key": "email",
+									"value": "halilcosdu@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-XSRF-TOKEN",
+								"value": "{{xsrf-token}}",
+								"type": "text"
+							},
+							{
+								"key": "Referer",
+								"value": "{{referrer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Test User\",\n    \"email\": \"test@mail.com\",\n    \"password\": \"password\",\n    \"password_confirmation\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/users",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-XSRF-TOKEN",
+								"value": "{{xsrf-token}}",
+								"type": "text"
+							},
+							{
+								"key": "Referer",
+								"value": "{{referrer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/users/{{userID}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"{{userID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-XSRF-TOKEN",
+								"value": "{{xsrf-token}}",
+								"type": "text"
+							},
+							{
+								"key": "Referer",
+								"value": "{{referrer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Test User\",\n    \"email\": \"test@mail.com\",\n    \"password\": \"password\",\n    \"password_confirmation\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/users/{{userID}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"{{userID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-XSRF-TOKEN",
+								"value": "{{xsrf-token}}",
+								"type": "text"
+							},
+							{
+								"key": "Referer",
+								"value": "{{referrer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/users/{{userID}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"{{userID}}"
 							]
 						}
 					},
