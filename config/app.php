@@ -200,7 +200,8 @@ return [
         App\Providers\Log\ActivityProvider::class,
         App\Providers\Response\ResponseServiceProvider::class,
         App\Providers\RepositoryServiceProvider::class,
-        App\Providers\ObserverServiceProvider::class
+        App\Providers\ObserverServiceProvider::class,
+        App\Providers\MacroServiceProvider::class,
 
     ],
 
