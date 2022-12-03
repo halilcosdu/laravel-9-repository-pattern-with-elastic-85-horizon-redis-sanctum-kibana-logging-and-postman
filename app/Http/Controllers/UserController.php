@@ -61,10 +61,11 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      *
+     * @param  \App\Http\Requests\User\ShowRequest  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(ShowRequest $request, $id)
+    public function show(ShowRequest $request, int $id)
     {
         activity([
             'action' => 'users.show',
