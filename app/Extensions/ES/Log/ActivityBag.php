@@ -36,6 +36,21 @@ class ActivityBag implements Arrayable
     private array|null $info = null;
 
     /**
+     * @var string
+     */
+    private string $uri;
+
+    /**
+     * @var string
+     */
+    private string $method;
+
+    /**
+     * @var string
+     */
+    private string $agent;
+
+    /**
      * @return array
      */
     public function toArray()
@@ -46,6 +61,9 @@ class ActivityBag implements Arrayable
             'date' => $this->getDate(),
             'causer_id' => $this->getCauserID(),
             'info' => $this->getInfo(),
+            'uri' => $this->getUri(),
+            'method' => $this->getMethod(),
+            'agent' => $this->getAgent(),
         ];
     }
 
@@ -59,7 +77,7 @@ class ActivityBag implements Arrayable
 
     /**
      * @param  mixed  $ip
-     * @return \App\Extensions\Log\ActivityBag
+     * @return \App\Extensions\ES\Log\ActivityBag
      */
     public function setIP(mixed $ip)
     {
@@ -78,7 +96,7 @@ class ActivityBag implements Arrayable
 
     /**
      * @param  string  $action
-     * @return \App\Extensions\Log\ActivityBag
+     * @return \App\Extensions\ES\Log\ActivityBag
      */
     public function setAction(string $action)
     {
@@ -97,7 +115,7 @@ class ActivityBag implements Arrayable
 
     /**
      * @param  \Carbon\Carbon  $date
-     * @return \App\Extensions\Log\ActivityBag
+     * @return \App\Extensions\ES\Log\ActivityBag
      */
     public function setDate(Carbon $date)
     {
@@ -116,7 +134,7 @@ class ActivityBag implements Arrayable
 
     /**
      * @param  int|null  $causerID
-     * @return \App\Extensions\Log\ActivityBag
+     * @return \App\Extensions\ES\Log\ActivityBag
      */
     public function setCauserID(?int $causerID)
     {
@@ -135,11 +153,68 @@ class ActivityBag implements Arrayable
 
     /**
      * @param  array|null  $info
-     * @return \App\Extensions\Log\ActivityBag
+     * @return \App\Extensions\ES\Log\ActivityBag
      */
     public function setInfo(?array $info)
     {
         $this->info = $info;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUri()
+    {
+        return $this->uri;
+    }
+
+    /**
+     * @param  string  $uri
+     * @return \App\Extensions\ES\Log\ActivityBag
+     */
+    public function setUri(string $uri)
+    {
+        $this->uri = $uri;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMethod()
+    {
+        return $this->method;
+    }
+
+    /**
+     * @param  string  $method
+     * @return \App\Extensions\ES\Log\ActivityBag
+     */
+    public function setMethod(string $method)
+    {
+        $this->method = $method;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAgent()
+    {
+        return $this->agent;
+    }
+
+    /**
+     * @param  string  $agent
+     * @return \App\Extensions\ES\Log\ActivityBag
+     */
+    public function setAgent(string $agent)
+    {
+        $this->agent = $agent;
 
         return $this;
     }

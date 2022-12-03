@@ -97,10 +97,13 @@ class ActivityService implements ActivityContract
             ->setIP($request->ip())
             ->setDate(now())
             ->setAction($attributes['action'])
-            ->setCauserID($request->user()?->id);
+            ->setCauserID($request->user()?->id)
+            ->setUri($request->getRequestUri())
+            ->setMethod($request->getMethod())
+            ->setAgent($request->userAgent());
 
         collect($attributes)
-            ->except(['ip', 'date', 'causer_id', 'action'])
+            ->except(['ip', 'date', 'causer_id', 'action', 'uri', 'method', 'agent'])
             ->each(function ($attribute, $key) {
                 $this->activityBag->{'set'.$key}($attribute);
             });
