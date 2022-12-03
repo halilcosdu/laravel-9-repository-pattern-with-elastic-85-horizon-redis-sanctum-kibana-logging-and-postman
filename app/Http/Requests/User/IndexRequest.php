@@ -2,6 +2,8 @@
 
 namespace App\Http\Requests\User;
 
+use App\Pipes\Permission\EmailMustBeVerified;
+use App\Services\Permission\PermissionService;
 use Illuminate\Foundation\Http\FormRequest;
 
 class IndexRequest extends FormRequest
@@ -11,9 +13,16 @@ class IndexRequest extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
+    public function authorize(PermissionService $permissionService)
     {
-        return true;
+        return $permissionService->check(
+            [
+                'request' => $this,
+            ],
+            [
+                EmailMustBeVerified::class, // This is just an example.
+            ]
+        );
     }
 
     /**

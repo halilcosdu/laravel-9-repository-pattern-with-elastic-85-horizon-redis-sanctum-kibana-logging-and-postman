@@ -32,6 +32,8 @@ class UserController extends Controller
      */
     public function index(IndexRequest $request, UserFilters $filters)
     {
+        // dd($request->custom_data);
+
         activity([
             'action' => 'users.index',
         ]);
