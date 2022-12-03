@@ -60,6 +60,10 @@ return [
 
     'asset_url' => env('ASSET_URL'),
 
+    'slow_query_enabled' => env('SLOW_QUERY_ENABLED'),
+
+    'slow_query_threshold' => env('SLOW_QUERY_THRESHOLD'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Timezone
