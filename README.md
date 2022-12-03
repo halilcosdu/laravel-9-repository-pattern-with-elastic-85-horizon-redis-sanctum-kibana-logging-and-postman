@@ -56,6 +56,9 @@ You can put this setting to cluster with
         }
     }
 
+## DOCUMENTATION
+    Boilerplate.postman_collection.json
+
 ## RUNNING TESTS
 
 *Running All Tests*
