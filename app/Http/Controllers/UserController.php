@@ -16,7 +16,6 @@ use App\Http\Resources\UserResource;
  */
 class UserController extends Controller
 {
-
     /**
      * @param  \App\Contracts\Repositories\UserContract  $userContract
      */
