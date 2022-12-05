@@ -2,6 +2,7 @@
 
 namespace App\Services\Permission;
 
+use Illuminate\Http\Request;
 use Illuminate\Pipeline\Pipeline;
 
 /**
@@ -18,12 +19,12 @@ class PermissionService
     }
 
     /**
-     * @param  array  $attributes
+     * @param  \Illuminate\Http\Request  $request
      * @param  array  $permissions
      * @return mixed
      */
-    public function check(array $attributes, array $permissions)
+    public function check(Request $request, array $permissions)
     {
-        return $this->pipeline->send($attributes)->through($permissions)->thenReturn();
+        return $this->pipeline->send($request)->through($permissions)->thenReturn();
     }
 }
