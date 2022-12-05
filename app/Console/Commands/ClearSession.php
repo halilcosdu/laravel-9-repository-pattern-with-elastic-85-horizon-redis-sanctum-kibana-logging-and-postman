@@ -26,6 +26,7 @@ class ClearSession extends Command
      * Execute the console command.
      *
      * @return void
+     *
      * @throws RedisException
      */
     public function handle()

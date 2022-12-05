@@ -2,8 +2,8 @@
 
 namespace App\Repositories\ES;
 
-use Elastic\Elasticsearch\ClientBuilder;
 use Elastic\Elasticsearch\Client as Connection;
+use Elastic\Elasticsearch\ClientBuilder;
 use GuzzleHttp\Client;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Query\Builder as Query;
@@ -17,6 +17,7 @@ class Repository implements RepositoryInterface
      * Default index name if not defined from subclasses.
      */
     public const INDEX = 'default';
+
     /**
      * @var ClientBuilder
      */

@@ -3,8 +3,6 @@
 namespace App\Listeners\Auth;
 
 use Illuminate\Auth\Events\CurrentDeviceLogout;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Queue\InteractsWithQueue;
 
 class LogCurrentDeviceLogout
 {

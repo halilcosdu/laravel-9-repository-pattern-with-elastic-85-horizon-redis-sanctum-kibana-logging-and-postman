@@ -4,9 +4,6 @@ namespace App\Extensions\ES;
 
 use Elasticsearch\Namespaces\AbstractNamespace;
 
-/**
- *
- */
 class SQLNamespace extends AbstractNamespace
 {
     /**

@@ -15,16 +15,16 @@ class ActivityResource extends JsonResource
     public function toArray($request)
     {
         return parent::toArray($request) + [
-                'browser' => empty(agent($this->agent)->browser->toString()) ? null :
-                    [
-                        'family' => agent($this->agent)->browser?->getName() ?? 'Invalid',
-                        'version' => agent($this->agent)->browser?->getVersion() ?? 'Invalid',
-                    ],
-                'os' => empty(agent($this->agent)->os?->toString()) ? null :
-                    [
-                        'family' => agent($this->agent)->os?->getName() ?? 'Invalid',
-                        'version' => agent($this->agent)->os?->getVersion() ?? 'Invalid',
-                    ],
-            ];
+            'browser' => empty(agent($this->agent)->browser->toString()) ? null :
+                [
+                    'family' => agent($this->agent)->browser?->getName() ?? 'Invalid',
+                    'version' => agent($this->agent)->browser?->getVersion() ?? 'Invalid',
+                ],
+            'os' => empty(agent($this->agent)->os?->toString()) ? null :
+                [
+                    'family' => agent($this->agent)->os?->getName() ?? 'Invalid',
+                    'version' => agent($this->agent)->os?->getVersion() ?? 'Invalid',
+                ],
+        ];
     }
 }

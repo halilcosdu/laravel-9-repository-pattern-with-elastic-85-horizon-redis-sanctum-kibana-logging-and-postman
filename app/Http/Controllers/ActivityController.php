@@ -8,9 +8,6 @@ use App\Http\Requests\Log\IndexRequest;
 use App\Http\Requests\Log\ShowRequest;
 use App\Http\Resources\Log\ActivityResource;
 
-/**
- *
- */
 class ActivityController extends Controller
 {
     /**

@@ -18,7 +18,7 @@ interface ResponseContract
     public function success(mixed $resource = [], int $statusCode = Response::HTTP_OK);
 
     /**
-     * @param mixed $resource
+     * @param  mixed  $resource
      * @param  int  $statusCode
      * @param  Exception|null  $exception
      * @return Response

@@ -4,9 +4,6 @@ namespace App\Repositories;
 
 use App\Filters\QueryFilters;
 
-/**
- *
- */
 interface RepositoryInterface
 {
     /**
@@ -15,7 +12,6 @@ interface RepositoryInterface
     public function all();
 
     /**
-     *
      * @param  int|\Closure|null  $perPage
      * @param  array|string  $columns
      * @param  string  $pageName
@@ -32,7 +28,6 @@ interface RepositoryInterface
     );
 
     /**
-     *
      * @param  \App\Filters\QueryFilters  $filters
      * @param  int|\Closure|null  $perPage
      * @param  array|string  $columns

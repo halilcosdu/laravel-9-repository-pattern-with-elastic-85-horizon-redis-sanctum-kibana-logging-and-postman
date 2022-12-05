@@ -5,9 +5,6 @@ namespace App\Pipes;
 use Closure;
 use Illuminate\Http\Request;
 
-/**
- *
- */
 class ExamplePipe
 {
     /**
@@ -22,7 +19,7 @@ class ExamplePipe
         }
 
         $request->merge([
-            "custom_data" => 'Custom Data'// Sending Custom data to Controller.
+            'custom_data' => 'Custom Data', // Sending Custom data to Controller.
         ]);
 
         return $next($request);

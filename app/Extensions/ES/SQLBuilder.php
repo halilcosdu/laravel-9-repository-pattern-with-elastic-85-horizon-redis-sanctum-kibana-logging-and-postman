@@ -6,9 +6,6 @@ use Elasticsearch\Namespaces\NamespaceBuilderInterface;
 use Elasticsearch\Serializers\SerializerInterface;
 use Elasticsearch\Transport;
 
-/**
- *
- */
 class SQLBuilder implements NamespaceBuilderInterface
 {
     /**

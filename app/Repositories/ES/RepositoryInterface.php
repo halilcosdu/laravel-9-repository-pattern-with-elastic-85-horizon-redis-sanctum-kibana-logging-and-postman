@@ -2,9 +2,6 @@
 
 namespace App\Repositories\ES;
 
-/**
- *
- */
 interface RepositoryInterface
 {
     /**

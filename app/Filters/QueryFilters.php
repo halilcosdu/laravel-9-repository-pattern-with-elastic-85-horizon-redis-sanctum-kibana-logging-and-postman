@@ -5,9 +5,6 @@ namespace App\Filters;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 
-/**
- *
- */
 abstract class QueryFilters
 {
     /**

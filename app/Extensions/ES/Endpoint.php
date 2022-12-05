@@ -5,9 +5,6 @@ namespace App\Extensions\ES;
 use Elasticsearch\Common\Exceptions\InvalidArgumentException;
 use Elasticsearch\Endpoints\AbstractEndpoint;
 
-/**
- *
- */
 class Endpoint extends AbstractEndpoint
 {
     /**

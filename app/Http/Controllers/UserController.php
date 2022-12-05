@@ -11,9 +11,6 @@ use App\Http\Requests\User\StoreRequest;
 use App\Http\Requests\User\UpdateRequest;
 use App\Http\Resources\UserResource;
 
-/**
- *
- */
 class UserController extends Controller
 {
     /**

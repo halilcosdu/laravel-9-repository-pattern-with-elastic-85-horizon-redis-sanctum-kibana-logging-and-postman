@@ -49,6 +49,7 @@ class JSONResponseService implements ResponseContract
      * @param  mixed|array  $resource
      * @param  int  $statusCode
      * @return JsonResponse|ResponseAlias
+     *
      * @throws InvalidResourceException|\ReflectionException
      */
     public function success(mixed $resource = [], int $statusCode = ResponseAlias::HTTP_OK)

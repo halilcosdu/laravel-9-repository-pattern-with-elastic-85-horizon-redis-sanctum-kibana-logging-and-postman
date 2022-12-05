@@ -5,9 +5,6 @@ namespace App\Extensions\ES\Log;
 use Carbon\Carbon;
 use Illuminate\Contracts\Support\Arrayable;
 
-/**
- *
- */
 class ActivityBag implements Arrayable
 {
     /**

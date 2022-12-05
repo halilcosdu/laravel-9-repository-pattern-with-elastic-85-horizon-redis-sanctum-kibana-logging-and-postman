@@ -26,6 +26,7 @@ class ClearElastic extends Command
      * Execute the console command.
      *
      * @return void
+     *
      * @throws RedisException
      */
     public function handle(ActivityContract $activityContract)

@@ -46,7 +46,6 @@ class User extends Authenticatable implements MustVerifyEmail
     ];
 
     /**
-     *
      * @return \Illuminate\Database\Eloquent\Casts\Attribute
      */
     protected function password(): Attribute

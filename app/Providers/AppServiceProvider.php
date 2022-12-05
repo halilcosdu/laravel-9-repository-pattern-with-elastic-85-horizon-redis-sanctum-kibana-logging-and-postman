@@ -32,7 +32,7 @@ class AppServiceProvider extends ServiceProvider
                 config('app.slow_query_threshold', 500),
                 function (Connection $connection, QueryExecuted $event) {
                     $query = vsprintf(str_replace(['%', '?'], ['%%', '%s'], $event->sql), $event->bindings);
-                    $result = sprintf("%s (%s): %s", $connection->getName(), $event->time / 1000, $query);
+                    $result = sprintf('%s (%s): %s', $connection->getName(), $event->time / 1000, $query);
                     $this->sendSlowQueryToSentry($result);
                     // Notify development team with $result
                 }

@@ -4,9 +4,6 @@ namespace App\Contracts\Log;
 
 use Illuminate\Http\Request;
 
-/**
- *
- */
 interface ActivityContract
 {
     /**
@@ -37,6 +34,7 @@ interface ActivityContract
 
     /**
      * @return void
+     *
      * @throws \Elastic\Elasticsearch\Exception\ClientResponseException
      * @throws \Elastic\Elasticsearch\Exception\MissingParameterException
      * @throws \Elastic\Elasticsearch\Exception\ServerResponseException

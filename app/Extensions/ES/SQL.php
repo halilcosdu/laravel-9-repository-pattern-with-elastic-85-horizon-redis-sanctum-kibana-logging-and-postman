@@ -2,9 +2,6 @@
 
 namespace App\Extensions\ES;
 
-/**
- *
- */
 class SQL
 {
     /**

@@ -9,9 +9,6 @@ use App\Jobs\Log\Activity;
 use App\Services\DateService;
 use Illuminate\Http\Request;
 
-/**
- *
- */
 class ActivityService implements ActivityContract
 {
     /**
@@ -50,6 +47,7 @@ class ActivityService implements ActivityContract
     /**
      * @param  \Illuminate\Http\Request  $request
      * @return array
+     *
      * @throws \Exception
      */
     public function all(Request $request)
@@ -68,6 +66,7 @@ class ActivityService implements ActivityContract
     /**
      * @param $logID
      * @return mixed
+     *
      * @throws \Throwable
      */
     public function get($logID)
@@ -77,6 +76,7 @@ class ActivityService implements ActivityContract
 
     /**
      * @return void
+     *
      * @throws \Elastic\Elasticsearch\Exception\ClientResponseException
      * @throws \Elastic\Elasticsearch\Exception\MissingParameterException
      * @throws \Elastic\Elasticsearch\Exception\ServerResponseException
