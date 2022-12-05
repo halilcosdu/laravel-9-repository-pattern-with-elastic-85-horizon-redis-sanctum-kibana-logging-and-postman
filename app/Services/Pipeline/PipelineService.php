@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\Permission;
+namespace App\Services\Pipeline;
 
 use Illuminate\Http\Request;
 use Illuminate\Pipeline\Pipeline;
@@ -8,7 +8,7 @@ use Illuminate\Pipeline\Pipeline;
 /**
  *
  */
-class PermissionService
+class PipelineService
 {
     /**
      * @param  \Illuminate\Pipeline\Pipeline  $pipeline

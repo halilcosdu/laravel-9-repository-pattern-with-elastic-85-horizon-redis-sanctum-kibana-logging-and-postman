@@ -2,9 +2,9 @@
 
 namespace App\Http\Requests\User;
 
-use App\Pipes\Permission\EmailMustBeVerified;
-use App\Pipes\Permission\UserMustBeActive;
-use App\Services\Permission\PermissionService;
+use App\Pipes\EmailMustBeVerified;
+use App\Pipes\UserMustBeActive;
+use App\Services\Pipeline\PipelineService;
 use Illuminate\Foundation\Http\FormRequest;
 
 class IndexRequest extends FormRequest
@@ -14,9 +14,9 @@ class IndexRequest extends FormRequest
      *
      * @return bool
      */
-    public function authorize(PermissionService $permissionService)
+    public function authorize(PipelineService $pipelineService)
     {
-        return $permissionService->check(
+        return $pipelineService->check(
             $this,
             [
                 EmailMustBeVerified::class, // This is just an example.

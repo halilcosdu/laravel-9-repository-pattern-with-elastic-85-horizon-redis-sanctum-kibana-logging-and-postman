@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Pipes\Permission;
+namespace App\Pipes;
 
 use Closure;
 use Illuminate\Http\Request;
