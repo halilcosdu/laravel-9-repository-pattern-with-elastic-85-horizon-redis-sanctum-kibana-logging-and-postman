@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 /**
  *
  */
-class UserMustBeActive
+class ExamplePipe
 {
     /**
      * @param  \Illuminate\Http\Request  $request
@@ -17,8 +17,12 @@ class UserMustBeActive
      */
     public function handle(Request $request, Closure $next)
     {
+        if (! $request->user()->hasVerifiedEmail()) {
+            return false;
+        }
+
         $request->merge([
-            "must_active" => 'Active Data'// Sending Custom data to Controller.
+            "custom_data" => 'Custom Data'// Sending Custom data to Controller.
         ]);
 
         return $next($request);

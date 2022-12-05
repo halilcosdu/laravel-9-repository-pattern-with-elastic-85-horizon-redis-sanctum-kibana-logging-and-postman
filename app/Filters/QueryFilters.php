@@ -5,6 +5,9 @@ namespace App\Filters;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 
+/**
+ *
+ */
 abstract class QueryFilters
 {
     /**
@@ -45,7 +48,6 @@ abstract class QueryFilters
             if (! method_exists($this, $name)) {
                 continue;
             }
-
             if (is_null($value)) {
                 continue;
             }
@@ -58,6 +60,17 @@ abstract class QueryFilters
         }
 
         return $this->builder;
+    }
+
+    /**
+     * @param  string  $relations
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function include(string $relations)
+    {
+        $relations = explode(',', $relations);
+
+        return $this->builder->with($relations);
     }
 
     /**
