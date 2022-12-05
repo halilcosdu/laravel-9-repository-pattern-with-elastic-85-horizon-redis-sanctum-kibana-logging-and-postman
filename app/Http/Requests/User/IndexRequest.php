@@ -4,7 +4,7 @@ namespace App\Http\Requests\User;
 
 use App\Pipes\EmailMustBeVerified;
 use App\Pipes\UserMustBeActive;
-use App\Services\Pipeline\PipelineService;
+use App\Services\PipelineService;
 use Illuminate\Foundation\Http\FormRequest;
 
 class IndexRequest extends FormRequest

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\Pipeline;
+namespace App\Services;
 
 use Illuminate\Http\Request;
 use Illuminate\Pipeline\Pipeline;
@@ -20,11 +20,11 @@ class PipelineService
 
     /**
      * @param  \Illuminate\Http\Request  $request
-     * @param  array  $permissions
+     * @param  array  $pipes
      * @return mixed
      */
-    public function check(Request $request, array $permissions)
+    public function check(Request $request, array $pipes)
     {
-        return $this->pipeline->send($request)->through($permissions)->thenReturn();
+        return $this->pipeline->send($request)->through($pipes)->thenReturn();
     }
 }
