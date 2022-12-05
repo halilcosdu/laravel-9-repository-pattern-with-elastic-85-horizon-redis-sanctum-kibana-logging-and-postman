@@ -76,3 +76,7 @@ You can put this setting to cluster with
 *Delete all docker images and volumes*
 
     docker system prune -a --volumes
+
+## Laravel Pint
+
+    sail php ./vendor/bin/pint
