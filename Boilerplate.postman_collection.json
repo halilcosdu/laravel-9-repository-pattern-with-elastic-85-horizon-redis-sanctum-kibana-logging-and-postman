@@ -410,7 +410,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}/api/users?name=HalilCosdu&email=halilcosdu@gmail.com",
+							"raw": "{{host}}/api/users?name=halil&email=halilcosdu@gmail.com&include=company",
 							"host": [
 								"{{host}}"
 							],
@@ -421,11 +421,15 @@
 							"query": [
 								{
 									"key": "name",
-									"value": "HalilCosdu"
+									"value": "halil"
 								},
 								{
 									"key": "email",
 									"value": "halilcosdu@gmail.com"
+								},
+								{
+									"key": "include",
+									"value": "company"
 								}
 							]
 						}
